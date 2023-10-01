@@ -1,3 +1,6 @@
+import hifzImage from '../../images/OIAC-Hifz-Program.webp'
+
+
 export default function LatestPosts(){
     return(
         <div className="w-screen mx-auto">
@@ -6,7 +9,7 @@ export default function LatestPosts(){
                 <div className=" flex flex-wrap items-start justify-between content-stretch mt-5">
                     <div className="border border-black-100 rounded-md w-full md:w-[50%] lg:w-[33%] h-[700px]">
                         <div>
-                            <img className="rounded-md h-[500px]" src="/images/OIAC-Hifz-Program.webp" alt="OIAC Hifz Program"></img>
+                            <img className="rounded-md h-[500px]" src={hifzImage} alt="OIAC Hifz Program"></img>
                         </div>
                         <div className="p-5">
                             <h4 className="text-2xl">After School Hifz Program</h4>
