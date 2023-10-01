@@ -9,7 +9,7 @@ export default function Nav(){
 
 
     return (
-        <nav className="w-screen bg-mintGreen1 text-green-950 text-xs font-bold">
+        <nav className="w-screen bg-mintGreen1 text-green-950 text-md font-bold">
             <div className="2xl:container 2xl:mx-auto px-8 py-2">
                 <div className="flex justify-between items-center">
                     <div className='flex space-x-8 items-center'>
