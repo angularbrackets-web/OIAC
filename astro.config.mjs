@@ -8,4 +8,5 @@ export default defineConfig({
   integrations: [tailwind(), react()],
   site: 'https://ibrahimizh.github.io',
   base: '/oiac-website',
+  output: "static"
 });
