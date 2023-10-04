@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import oiacLogo from '../../images/oiac-logo-removebg-preview.webp'
+import oiacLogo from '../../assets/oiac-logo-removebg-preview.webp'
 
 export default function Nav(){
     const [isMobileMenuVisible, setMobileMenuVisibility] = useState(false)

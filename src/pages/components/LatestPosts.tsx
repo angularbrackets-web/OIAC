@@ -1,4 +1,6 @@
-import hifzImage from '../../images/OIAC-Hifz-Program.webp'
+import hifzImage from '../../assets/OIAC-Hifz-Program.webp'
+import karateImage from '../../assets/OIAC-KARATE-scaled.webp'
+import quranIntensiveImage from '../../assets/OIAC-Quran-Intensive-1.webp'
 
 
 export default function LatestPosts(){
@@ -21,7 +23,7 @@ export default function LatestPosts(){
                     </div>
                     <div className="border border-black-100 rounded-md w-full md:w-[50%] lg:w-[33%] h-[700px]">
                         <div>
-                            <img className="rounded-md h-[500px]" src="/images/OIAC-KARATE-scaled.webp" alt="Karate Class"></img>
+                            <img className="rounded-md h-[500px]" src={karateImage} alt="Karate Class"></img>
                         </div>
                         <div className="p-5">
                             <h4 className="text-2xl">Karate Class</h4>
@@ -33,7 +35,7 @@ export default function LatestPosts(){
                     </div>
                     <div className="border border-black-100 rounded-md w-full md:w-[50%] lg:w-[33%] h-[700px]">
                         <div>
-                            <img className="rounded-md h-[500px]" src="/images/OIAC-Quran-Intensive-1.webp" alt="Quran Summer Camp"></img>
+                            <img className="rounded-md h-[500px]" src={quranIntensiveImage} alt="Quran Summer Camp"></img>
                         </div>
                         <div className="p-5">
                             <h4 className="text-2xl">Summer Quran Intensive Camp</h4>
