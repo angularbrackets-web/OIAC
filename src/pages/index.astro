@@ -1,36 +1,32 @@
 ---
-import Nav from './components/Nav'
-import "../styles/global.css";
-import NavPrayerTimes from './components/NavPrayerTimes';
-import NavJummahTimes from './components/NavJummahTimes';
-import Welcome from './components/Welcome';
-import LatestPosts from './components/LatestPosts';
-import Events from './components/Events';
-import PrayerTimes from './components/PrayerTimes';
-import Donate from './components/Donate';
-import Volunteer from './components/Volunteer';
+import Nav from "../components/Nav.astro"
+import NavPrayerTimes from "../components/NavPrayerTimes.astro"
+import Welcome from "../components/Welcome.astro"
+import LatestPosts from "../components/LatestPosts.astro"
+import Events from "../components/Events.astro"
+import PrayerTimes from "../components/PrayerTimes.astro"
+import Donate from "../components/Donate.astro"
+import Volunteer from "../components/Volunteer.astro"
+import Imams from "../components/Imams.astro"
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/assets/OIAC.Logo.png" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Welcome to OIAC Edmonton !</title>
+		<title>Astro</title>
 	</head>
 	<body>
-		<Nav client:load></Nav>
-		<div class=" hidden lg:block">
-			<NavPrayerTimes client:load></NavPrayerTimes>
-		</div>
-		
-		<NavJummahTimes client:load></NavJummahTimes>
-		<Welcome client:load ></Welcome>
+		<Nav></Nav>
+		<NavPrayerTimes></NavPrayerTimes>
+		<Welcome></Welcome>
 		<LatestPosts></LatestPosts>
 		<Events></Events>
 		<PrayerTimes></PrayerTimes>
 		<Donate></Donate>
 		<Volunteer></Volunteer>
+		<Imams></Imams>
 	</body>
 </html>
