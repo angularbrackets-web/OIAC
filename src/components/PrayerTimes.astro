@@ -1,4 +1,13 @@
 ---
+import {test, getPrayerTimes} from '../shared/apollo-client'
+
+const testVal = test()
+
+const localPrayerTimes1 = await getPrayerTimes()
+const localPrayerTimes2 = localPrayerTimes1[0]
+console.log('Prayer Times OBJ : ', localPrayerTimes2.fajrBegins)
+console.log('Prayer Times 2 : ', localPrayerTimes2)
+
 ---
 
 <div class="px-4 p-2 md:px-8 md:py-2 mx-auto">

@@ -49,5 +49,29 @@ import quranIntensiveImage from '../assets/OIAC-Quran-Intensive-1.webp'
             </div>
         </div>
 
+
+        <!-- <div class="w-full h-[500px] bg-gray-800 rounded-xl my-5">
+            <img class="postImageContainer w-full h-[500px]" />
+        </div> -->
+
     </div>
 </div>
+
+<script>
+    let postImages = [
+    '../assets/OIAC-Hifz-Program.webp',
+    '../assets/OIAC-KARATE-scaled.webp',
+    '../assets/OIAC-Quran-Intensive-1.webp'
+    ]
+
+    let postImageContainer = document.querySelector('.postImageContainer')
+
+    let setImage = () => {
+        
+    }
+
+    postImages.map(postImage => {
+        postImageContainer.src = postImage
+    })
+
+</script>
