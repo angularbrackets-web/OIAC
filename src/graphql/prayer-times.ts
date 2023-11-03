@@ -1,4 +1,4 @@
-import { ApolloClient, InMemoryCache, ApolloProvider, gql, useQuery, useMutation } from '@apollo/client'
+import { gql } from '@apollo/client'
 import client  from './apollo-client'
 
 export type PrayerTime = {
