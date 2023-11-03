@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client'
+import { gql } from "@apollo/client/core/core.cjs"
 import client  from './apollo-client'
 
 export type PrayerTime = {
