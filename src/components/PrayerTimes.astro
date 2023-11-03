@@ -1,13 +1,9 @@
 ---
-import {test, getPrayerTimes} from '../shared/apollo-client'
+import {getPrayerTimesForCurrentDay, getPrayerTimesForCurrentMonth} from '../graphql/prayer-times'
+import {type PrayerTime} from '../graphql/prayer-times'
+const prayerTimesForCurrentDay : PrayerTime = await getPrayerTimesForCurrentDay()
 
-const testVal = test()
-
-const localPrayerTimes1 = await getPrayerTimes()
-const localPrayerTimes2 = localPrayerTimes1[0]
-console.log('Prayer Times OBJ : ', localPrayerTimes2.fajrBegins)
-console.log('Prayer Times 2 : ', localPrayerTimes2)
-
+const prayerTimesForCurrentMonth : Array<PrayerTime> = await getPrayerTimesForCurrentMonth()
 ---
 
 <div class="px-4 p-2 md:px-8 md:py-2 mx-auto">
@@ -22,33 +18,33 @@ console.log('Prayer Times 2 : ', localPrayerTimes2)
                 </div>
                 <div class="grid grid-cols-3 gap-1 border-b border-emerald-300 text-xl my-2 text-center">
                     <label class="font-bold text-left pl-5">Fajr</label>
-                    <label class="text-emerald-600">06:05 AM</label>
-                    <label class="text-emerald-800">06:30 AM</label>
+                    <label class="text-emerald-600">{prayerTimesForCurrentDay.fajrBegins}</label>
+                    <label class="text-emerald-800">{prayerTimesForCurrentDay.fajrJamah}</label>
                 </div>
                 <div class="grid grid-cols-3 gap-1 border-b border-emerald-300 text-xl my-2 text-center">
                     <label class="font-bold text-left pl-5">Sunrise</label>
-                    <label class="text-emerald-600">08:04 AM</label>
+                    <label class="text-emerald-600">{prayerTimesForCurrentDay.sunrise}</label>
                     <label class="text-emerald-800"></label>
                 </div>
                 <div class="grid grid-cols-3 gap-1 border-b border-emerald-300 text-xl my-2 text-center">
                     <label class="font-bold text-left pl-5">Dhuhr</label>
-                    <label class="text-emerald-600">01:25 PM</label>
-                    <label class="text-emerald-800">02:00 PM</label>
+                    <label class="text-emerald-600">{prayerTimesForCurrentDay.zuhrBegins}</label>
+                    <label class="text-emerald-800">{prayerTimesForCurrentDay.zuhrJamah}</label>
                 </div>
                 <div class="grid grid-cols-3 gap-1 border-b border-emerald-300 text-xl my-2 text-center">
                     <label class="font-bold text-left pl-5">Asr</label>
-                    <label class="text-emerald-600">03:58 PM</label>
-                    <label class="text-emerald-800">04:30 PM</label>
+                    <label class="text-emerald-600">{prayerTimesForCurrentDay.asrBegins}</label>
+                    <label class="text-emerald-800">{prayerTimesForCurrentDay.asrJamah}</label>
                 </div>
                 <div class="grid grid-cols-3 gap-1 border-b border-emerald-300 text-xl my-2 text-center">
                     <label class="font-bold text-left pl-5">Maghrib</label>
-                    <label class="text-emerald-600">06:36 PM</label>
-                    <label class="text-emerald-800">06:41 PM</label>
+                    <label class="text-emerald-600">{prayerTimesForCurrentDay.maghribBegins}</label>
+                    <label class="text-emerald-800">{prayerTimesForCurrentDay.maghribJamah}</label>
                 </div>
                 <div class="grid grid-cols-3 gap-1 border-b border-emerald-300 text-xl my-2 text-center">
                     <label class="font-bold text-left pl-5">Isha</label>
-                    <label class="text-emerald-600">08:25 PM</label>
-                    <label class="text-emerald-800">08:30 PM</label>
+                    <label class="text-emerald-600">{prayerTimesForCurrentDay.ishaBegins}</label>
+                    <label class="text-emerald-800">{prayerTimesForCurrentDay.ishaJamah}</label>
                 </div>
                 <div class="grid grid-cols-2 gap-1 border-b border-emerald-500 font-bold text-2xl my-2 text-center">
                     <h4 class="font-bold text-left pl-5">Jummah 1</h4>
